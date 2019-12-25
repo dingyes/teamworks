@@ -34,49 +34,69 @@ function animate(obj,json,callback){
 		}
 	}, 100)
 }
-var teamMember = document.getElementsByClassName("team-member")[0];
-var memberHover1 = document.getElementsByClassName("member-hover")[0];
-var memberHover2 = document.getElementsByClassName("member-hover")[1];
-var memberHover3 = document.getElementsByClassName("member-hover")[2];
-var memberHover4 = document.getElementsByClassName("member-hover")[3];
+
 var memberShares = document.getElementsByClassName("member-shares")[0];
-var memberShares1 = document.getElementsByClassName("member-shares1")[0];
-var memberShares2 = document.getElementsByClassName("member-shares2")[0];
-var memberShares3 = document.getElementsByClassName("member-shares3")[0];
-var memberShares4 = document.getElementsByClassName("member-shares4")[0];
-var shares1 = document.getElementsByClassName("shares1")[0];
-var shares2 = document.getElementsByClassName("shares2")[0];
-var shares3 = document.getElementsByClassName("shares3")[0];
-var shares4 = document.getElementsByClassName("shares4")[0];
-var rate1 = document.getElementsByClassName("rate1")[0];
-var rate2 = document.getElementsByClassName("rate2")[0];
-var rate3 = document.getElementsByClassName("rate3")[0];
-var rate4 = document.getElementsByClassName("rate4")[0];
-// var times = document.getElementsByClassName("times")[0];
-// var intervalId;
+var memberShares11 = document.getElementsByClassName("member-shares1")[0];
+var memberShares21 = document.getElementsByClassName("member-shares2")[0];
+var memberShares31 = document.getElementsByClassName("member-shares3")[0];
+var memberShares12 = document.getElementsByClassName("member-shares1")[1];
+var memberShares22 = document.getElementsByClassName("member-shares2")[1];
+var memberShares32 = document.getElementsByClassName("member-shares3")[1];
+var shares11 = document.getElementsByClassName("shares1")[0];
+var shares21 = document.getElementsByClassName("shares2")[0];
+var shares31 = document.getElementsByClassName("shares3")[0];
+var shares12 = document.getElementsByClassName("shares1")[1];
+var shares22 = document.getElementsByClassName("shares2")[1];
+var shares32 = document.getElementsByClassName("shares3")[1];
+var rate11 = document.getElementsByClassName("rate1")[0];
+var rate21 = document.getElementsByClassName("rate2")[0];
+var rate31 = document.getElementsByClassName("rate3")[0];
+var rate12 = document.getElementsByClassName("rate1")[1];
+var rate22 = document.getElementsByClassName("rate2")[1];
+var rate32 = document.getElementsByClassName("rate3")[1];
 
 //实现进度条动态效果
-memberShares1.onmouseover = function(){
+memberShares11.onmouseover = function(){
 	var length=0;
 	var rateNum=0;
 	var intervalId = setInterval(function(){
-		if(length>=104 && rateNum>=40) 
+		if(length>=52 && rateNum>=20) 
 			clearInterval(intervalId);
-		else if(length===104 || rateNum===40){
-			if(length===104)
-				shares1.style.width = "104px";
-			if(rateNum===40)
-				rate1.innerText = "40%";
+		else if(length===52 || rateNum===20){
+			if(length===52)
+				shares11.style.width = "52px";
+			if(rateNum===20)
+				rate11.innerText = "20%";
 		}
 		else{
 			length+=2.5;
 			rateNum++;
-			shares1.style.width = length + "px";
-			rate1.innerText = rateNum + "%";
+			shares11.style.width = length + "px";
+			rate11.innerText = rateNum + "%";
 		}
-	},10)
+	},20)
 }
-memberShares2.onmouseover = function(){
+memberShares12.onmouseover = function(){
+	var length=0;
+	var rateNum=0;
+	var intervalId = setInterval(function(){
+		if(length>=52 && rateNum>=20) 
+			clearInterval(intervalId);
+		else if(length===52 || rateNum===20){
+			if(length===52)
+				shares12.style.width = "52px";
+			if(rateNum===20)
+				rate12.innerText = "20%";
+		}
+		else{
+			length+=2.5;
+			rateNum++;
+			shares12.style.width = length + "px";
+			rate12.innerText = rateNum + "%";
+		}
+	},20)
+}
+memberShares21.onmouseover = function(){
 	var length=0;
 	var rateNum=0;
 	var intervalId = setInterval(function(){
@@ -84,19 +104,19 @@ memberShares2.onmouseover = function(){
 			clearInterval(intervalId);
 		else if(length===39 || rateNum===15){
 			if(length===39)
-				shares2.style.width = "39px";
+				shares21.style.width = "39px";
 			if(rateNum===15)
-				rate2.innerText = "15%";
+				rate21.innerText = "15%";
 		}
 		else{
 			length+=2.5;
 			rateNum++;
-			shares2.style.width = length + "px";
-			rate2.innerText = rateNum + "%";
+			shares21.style.width = length + "px";
+			rate21.innerText = rateNum + "%";
 		}
 	},10)
 }
-memberShares3.onmouseover = function(){
+memberShares22.onmouseover = function(){
 	var length=0;
 	var rateNum=0;
 	var intervalId = setInterval(function(){
@@ -104,35 +124,55 @@ memberShares3.onmouseover = function(){
 			clearInterval(intervalId);
 		else if(length===39 || rateNum===15){
 			if(length===39)
-				shares3.style.width = "39px";
+				shares22.style.width = "39px";
 			if(rateNum===15)
-				rate3.innerText = "15%";
+				rate22.innerText = "15%";
 		}
 		else{
 			length+=2.5;
 			rateNum++;
-			shares3.style.width = length + "px";
-			rate3.innerText = rateNum + "%";
+			shares22.style.width = length + "px";
+			rate22.innerText = rateNum + "%";
 		}
 	},10)
 }
-memberShares4.onmouseover = function(){
+memberShares31.onmouseover = function(){
 	var length=0;
 	var rateNum=0;
 	var intervalId = setInterval(function(){
-		if(length>=78 && rateNum>=30) 
+		if(length>=39 && rateNum>=15) 
 			clearInterval(intervalId);
-		else if(length===78 || rateNum===30){
-			if(length===78)
-				shares4.style.width = "78px";
-			if(rateNum===30)
-				rate4.innerText = "30%";
+		else if(length===39 || rateNum===15){
+			if(length===39)
+				shares31.style.width = "39px";
+			if(rateNum===15)
+				rate31.innerText = "15%";
 		}
 		else{
 			length+=2.5;
 			rateNum++;
-			shares4.style.width = length + "px";
-			rate4.innerText = rateNum + "%";
+			shares31.style.width = length + "px";
+			rate31.innerText = rateNum + "%";
+		}
+	},10)
+}
+memberShares32.onmouseover = function(){
+	var length=0;
+	var rateNum=0;
+	var intervalId = setInterval(function(){
+		if(length>=39 && rateNum>=15) 
+			clearInterval(intervalId);
+		else if(length===39 || rateNum===15){
+			if(length===39)
+				shares32.style.width = "39px";
+			if(rateNum===15)
+				rate32.innerText = "15%";
+		}
+		else{
+			length+=2.5;
+			rateNum++;
+			shares32.style.width = length + "px";
+			rate32.innerText = rateNum + "%";
 		}
 	},10)
 }

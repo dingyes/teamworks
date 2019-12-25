@@ -7,6 +7,11 @@ a{
 	text-decoration:none;
 	color:black;
 }
+ul li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
 .homepage-head-container{
 	height: 125px;
 	border-bottom: 2px solid #ccc;
@@ -144,6 +149,13 @@ a{
 	margin: 0 auto;
 	height: 320px;
 	width: 1130px;
+	margin-left: 180px;
+}
+.row1 li{
+	margin-left: 60px;
+}
+.row li:first-child{
+	margin-left: 0;
 }
 .col {
 	position: relative;
@@ -187,7 +199,7 @@ a{
 	opacity: 0;
 }
 .member-hover .member-info a {
-    font-size: 15px;
+    font-size: 20px;
     color: #de931f;
     font-weight: 400;
 }
@@ -211,14 +223,27 @@ a{
 }
 .member-social ul {
 	margin-top: 50px;
+	position: relative;
 }
 .member-social li {
 	float: left;
-	margin-right: 15px;
-	border-radius: 0;
+	display: block;
+	/* position: absolute; */
+	top: 0;
+	margin-right: 6px;
+	padding: 0;
+/* 	width: 40px;
+	height: 40px; */
 }
 .member-social li:first-child {
 	margin-left: 35px;
+}
+.member-social li:nth-child(2){
+	margin-left: 10px;
+}
+.member-social li:nth-child(3){
+	right: 25px;
+	position: absolute;
 }
 .member-social img {
 	height: 40px;
@@ -226,13 +251,11 @@ a{
 	border-radius: 50%;
 	border: 2px solid #ffffff;
 }
-.member-social img:hover {
-	blackground: #ffffff;
-}
 .row2 {
 	text-align: center;
 	margin: 0 auto;
 	margin-top: 45px;
+	margin-left: 180px;
 	height: 20px;
 	width: 1130px;
 }
@@ -240,7 +263,7 @@ a{
 	position: relative;
 	text-align: center;
 	float: left;
-	margin-left: 30px;
+	margin-left: 60px;
 	height: 20px;
 	width: 260px;
 	border-radius: 30px 30px;
@@ -259,16 +282,13 @@ a{
 	position: absolute;
 }
 .member-shares .shares1{
-	width: 104px;
+	width: 52px;
 }
 .member-shares .shares2{
 	width: 39px;
 }
 .member-shares .shares3{
 	width: 39px;
-}
-.member-shares .shares4{
-	width: 78px;
 }
 .member-shares .rate {
 	color: #ccffff;
