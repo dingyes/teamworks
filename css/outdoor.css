@@ -183,7 +183,7 @@ h1 > span:last-child{
     left:20px;
     padding-top: 5px;
     padding-left: 30px;
-    background-image: url(../images/featured/our-blog/head.png);
+    background-image: url(../images/outdoor/head.png);
     background-repeat:no-repeat;
 }
 .blog_boxlist .blog_btns .blog_traveldata{
@@ -193,7 +193,7 @@ h1 > span:last-child{
     right:20px;
     padding-top: 5px;
     padding-left: 35px;
-    background-image: url(../images/featured/our-blog/date.png);
+    background-image: url(../images/outdoor/date.png);
     background-repeat:no-repeat;
 
 }
