@@ -32,11 +32,18 @@ function animate(obj,json,callback){
 			clearInterval(obj.timer);
 			callback&&callback();
 		}
-	}, 30)
+	}, 100)
 }
 var teamMember = document.getElementsByClassName("team-member")[0];
-var memberHover = document.getElementsByClassName("member-hover")[0];
+var memberHover1 = document.getElementsByClassName("member-hover")[0];
+var memberHover2 = document.getElementsByClassName("member-hover")[1];
+var memberHover3 = document.getElementsByClassName("member-hover")[2];
+var memberHover4 = document.getElementsByClassName("member-hover")[3];
 var memberShares = document.getElementsByClassName("member-shares")[0];
+var memberShares1 = document.getElementsByClassName("member-shares1")[0];
+var memberShares2 = document.getElementsByClassName("member-shares2")[0];
+var memberShares3 = document.getElementsByClassName("member-shares3")[0];
+var memberShares4 = document.getElementsByClassName("member-shares4")[0];
 var shares1 = document.getElementsByClassName("shares1")[0];
 var shares2 = document.getElementsByClassName("shares2")[0];
 var shares3 = document.getElementsByClassName("shares3")[0];
@@ -47,121 +54,85 @@ var rate3 = document.getElementsByClassName("rate3")[0];
 var rate4 = document.getElementsByClassName("rate4")[0];
 // var times = document.getElementsByClassName("times")[0];
 // var intervalId;
-var num=0;
-var width=0;
 
 //实现进度条动态效果
-var index = 1;                                           
-var isMoving = false;
-window.onload = function(){
-	var index = 0;
+memberShares1.onmouseover = function(){
+	var length=0;
+	var rateNum=0;
 	var intervalId = setInterval(function(){
-		if(index>=104) 
+		if(length>=104 && rateNum>=40) 
 			clearInterval(intervalId);
-		else{
-			index++;
-			// animate(shares1, {left:index});
-			shares1.style.left = index + "px";
-			shares1.style.background = "#ccffff";
+		else if(length===104 || rateNum===40){
+			if(length===104)
+				shares1.style.width = "104px";
+			if(rateNum===40)
+				rate1.innerText = "40%";
 		}
-	},100)
-}
-window.onload = function(){
-	var index = 0;
-	intervalId = setInterval(function(){
-		if(index>=40)
-			clearInterval(intervalId);
 		else{
-			index++;
-			rate1.innerText = index + "%";
+			length+=2.5;
+			rateNum++;
+			shares1.style.width = length + "px";
+			rate1.innerText = rateNum + "%";
 		}
-	},100)
+	},10)
 }
-window.onload = function(){
-	var index = 0;
+memberShares2.onmouseover = function(){
+	var length=0;
+	var rateNum=0;
 	var intervalId = setInterval(function(){
-		if(index>=104) 
+		if(length>=39 && rateNum>=15) 
 			clearInterval(intervalId);
-		else{
-			index++;
-			// animate(shares1, {left:index});
-			shares2.style.left = index + "px";
-			shares2.style.background = "#ccffff";
+		else if(length===39 || rateNum===15){
+			if(length===39)
+				shares2.style.width = "39px";
+			if(rateNum===15)
+				rate2.innerText = "15%";
 		}
-	},100)
-}
-window.onload = function(){
-	var index = 0;
-	intervalId = setInterval(function(){
-		if(index>=40)
-			clearInterval(intervalId);
 		else{
-			index++;
-			rate2.innerText = index + "%";
+			length+=2.5;
+			rateNum++;
+			shares2.style.width = length + "px";
+			rate2.innerText = rateNum + "%";
 		}
-	},100)
+	},10)
 }
-window.onload = function(){
-	var index = 0;
+memberShares3.onmouseover = function(){
+	var length=0;
+	var rateNum=0;
 	var intervalId = setInterval(function(){
-		if(index>=104) 
+		if(length>=39 && rateNum>=15) 
 			clearInterval(intervalId);
-		else{
-			index++;
-			// animate(shares1, {left:index});
-			shares3.style.left = index + "px";
-			shares3.style.background = "#ccffff";
+		else if(length===39 || rateNum===15){
+			if(length===39)
+				shares3.style.width = "39px";
+			if(rateNum===15)
+				rate3.innerText = "15%";
 		}
-	},100)
-}
-window.onload = function(){
-	var index = 0;
-	intervalId = setInterval(function(){
-		if(index>=40)
-			clearInterval(intervalId);
 		else{
-			index++;
-			rate3.innerText = index + "%";
+			length+=2.5;
+			rateNum++;
+			shares3.style.width = length + "px";
+			rate3.innerText = rateNum + "%";
 		}
-	},100)
+	},10)
 }
-window.onload = function(){
-	var index = 0;
+memberShares4.onmouseover = function(){
+	var length=0;
+	var rateNum=0;
 	var intervalId = setInterval(function(){
-		if(index>=104) 
+		if(length>=78 && rateNum>=30) 
 			clearInterval(intervalId);
+		else if(length===78 || rateNum===30){
+			if(length===78)
+				shares4.style.width = "78px";
+			if(rateNum===30)
+				rate4.innerText = "30%";
+		}
 		else{
-			index++;
-			// animate(shares1, {left:index});
-			shares4.style.left = index + "px";
-			shares4.style.background = "#ccffff";
+			length+=2.5;
+			rateNum++;
+			shares4.style.width = length + "px";
+			rate4.innerText = rateNum + "%";
 		}
-	},100)
-}
-window.onload = function(){
-	var index = 0;
-	intervalId = setInterval(function(){
-		if(index>=40)
-			clearInterval(intervalId);
-		else{
-			index++;
-			rate4.innerText = index + "%";
-		}
-	},100)
-}
-teamMember.onmouseover = function(){
-	intervalId = setInterval(function(){
-		var left = 130px;
-		var top = 160;
-		var styleObj = getComputedStyle(memberHover);
-		var objLeft = 30;
-		var objTop = 25;
-		memberHover.style.left = (left - 1) + "px";
-		memberHover.style.top = (top - 1) + "px";
-		while(left=objLeft && top=objTop){
-			clearInterval(intervalId);
-		}
-		left -= 5;
-		top -= 5;
-	},1000)
+	},10)
 }

@@ -252,35 +252,23 @@ a{
 	background-color: #0089e9;
 	position: relative;
 }
-.member-shares .shares{
-	margin-right: 70px;
-	height: 20px;
-	color: #0089e9;
-} 
 .member-shares span{
 	background-color: #ccffff;
 	left: 0;
 	height: 20px;
 	position: absolute;
-	z-index: 20;
 }
 .member-shares .shares1{
 	width: 104px;
-	z-index: 10;
 }
 .member-shares .shares2{
 	width: 39px;
-	z-index: 10;
 }
 .member-shares .shares3{
 	width: 39px;
-	height: 20px;
-	z-index: 10;
 }
 .member-shares .shares4{
 	width: 78px;
-	height: 20px;
-	z-index: 10;
 }
 .member-shares .rate {
 	color: #ccffff;
